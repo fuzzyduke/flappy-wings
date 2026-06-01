@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="A fun Flappy Bird-style game with smooth animations and addictive gameplay">
+    <title>Flappy Wings | Retro Arcade Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="game-wrapper">
+        <div class="game-container" id="gameContainer">
+            <canvas id="gameCanvas"></canvas>
+
+            <!-- Start Screen -->
+            <div class="overlay" id="startScreen">
+                <div class="overlay-content">
+                    <h1 class="game-title">🐦 Flappy Wings</h1>
+                    <p class="instruction">Press <kbd>SPACE</kbd> or <kbd>TAP</kbd> to fly</p>
+                    <button class="btn-play" id="startBtn">▶ START GAME</button>
+                    <div class="high-score-display">
+                        <span>🏆 Best: </span><span id="highScoreStart">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div class="overlay hidden" id="gameOverScreen">
+                <div class="overlay-content">
+                    <h2 class="game-over-title">Game Over!</h2>
+                    <div class="score-panel">
+                        <div class="score-row">
+                            <span>Score</span>
+                            <span id="finalScore">0</span>
+                        </div>
+                        <div class="score-row best">
+                            <span>🏆 Best</span>
+                            <span id="highScore">0</span>
+                        </div>
+                    </div>
+                    <button class="btn-play" id="restartBtn">🔄 PLAY AGAIN</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Score -->
+        <div class="live-score" id="liveScore">0</div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
